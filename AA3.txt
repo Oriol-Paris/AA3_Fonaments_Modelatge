@@ -1,0 +1,10 @@
+Nuestro proyecto se divide en 5 scripts diferente, de los cuales 2 son controllers, otros 2 los necesarios para mover los brazos o tentaculo y un último script para coger el objeto
+
+Los dos controllers que encontramos son el control del tentáculoy el control del astronauta, el primero controla las acciones que tiene que hacer el tentáculo, empieza por ir a intentar coger el dorne perdido el cual se mueve
+de manera random por el espacio, al conseguir el drone cambia de objetivo y ahora se dirige al astronauta, lo importante aquí es que para evitar que el drone no encajase en la mano del astronauta hacemos que el drone pase a ser
+el último joint del tentaculo por lo que el drone siempre se dirigirá al astronauta, tras dejar el drone en su sitio este simplemente vuelve a su posicion original. El segundo controller simplemente activa o desactiva 
+el CCD de los brazos del astronauta cuando el brazo con el dron se acerca y una vez este ya tiene el dron.
+
+Luego encontramos los 2 scripts que controlan los movimientos de los brazos y el tentáculo utilizando los scripts dados en clase con pocos cambios
+
+Para acabar hay el script dedicado a recoger el objeto el cual simplemente cuando detecta que la distancia entre el ultimo joint de los brazos y el target es menor coge el target y cambia de estado el tentáculo
