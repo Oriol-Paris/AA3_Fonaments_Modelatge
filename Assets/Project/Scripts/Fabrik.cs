@@ -52,6 +52,8 @@ public class Fabrik : MonoBehaviour
                 FindAnyObjectByType<DroneMovement>().SetCanMove(false);
                 FindAnyObjectByType<DroneMovement>().transform.SetParent(joints.Last());
                 canMove = false;
+                Debug.Log(countIterations);
+                Debug.Log(Time.timeSinceLevelLoad);
             }
         }
         else

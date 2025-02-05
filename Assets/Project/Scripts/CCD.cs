@@ -51,6 +51,8 @@ public class CCD : MonoBehaviour
                 FindAnyObjectByType<DroneMovement>().SetCanMove(false);
                 FindAnyObjectByType<DroneMovement>().transform.SetParent(joints.Last());
                 canMove = false;
+                Debug.Log(iterationCount);
+                Debug.Log(Time.timeSinceLevelLoad);
             }
         }
         else
